@@ -1,0 +1,12 @@
+<h1>Lista de habitaciones</h1>
+<ul>
+    {% for habitacion in habitaciones %}
+        <li>{{ habitacion.numero }} - {{ habitacion.tipo }} - ${{ habitacion.precio }}</li>
+    {% endfor %}
+</ul>
+
+<select id="id_hotel" name="hotel">
+    {% for habitacion in habitaciones %}
+        <option value="{{ habitacion.id }}">{{ habitacion.numero }} - {{ habitacion.tipo }} - ${{ habitacion.precio }}</option>
+    {% endfor %}
+</select>
